@@ -1,0 +1,33 @@
+<h2>Please answer the question below</h2>
+<br>
+<br>
+<form action="/user/result" method="post">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label for="firstname">Please enter your first name</label>
+            <input type="text" class="form-control" name="firstname" placeholder="Your First Name">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label for="lastname">Please enter your last name</label>
+            <input type="text" class="form-control" name="lastname" placeholder="Your Last Name">
+        </div>
+    </div>
+    <br>
+    <br> {{# each questions }}
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label>Question: {{this.question}}</label><br/>
+            <input type="text" class="form-control" name="a_{{this._id}}" placeholder="Enter answer here">
+        </div>
+    </div>
+    <br>
+    <br> {{/each}}
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-warning">Submit</button>
+</form>
