@@ -1,4 +1,28 @@
-<div id="div1">
-    <p id="p1">This is a paragraph.</p>
-    <p id="p2">This is another paragraph.</p>
-</div>
+<h2>Please answer the question below</h2>
+<br>
+<br>
+<form action="/user/result" method="post">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label for="firstname">Please enter your first name</label>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label for="lastname">Please enter your last name</label>
+        </div>
+    </div>
+    <br>
+    <br> {{# each questions }}
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <label>Question: {{this.question}}</label>
+            <br/>
+            <label>Answer: {{this.answer}}</label>
+        </div>
+    </div>
+    <br>
+    <br> {{/each}}
+</form>

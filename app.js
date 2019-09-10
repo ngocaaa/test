@@ -50,7 +50,7 @@ app.get('/admin/create-form', function (req, res, ) {
 // Add Question To Cloudant DB
 app.post('/admin/create', function (req, res) {
     var docs = [
-        { "question": req.body.q1, "answer": req.body.a1 },
+        { "question": req.body.q1, "answer_1": req.body.a11, "answer_2": req.body.a12, "answer_3": req.body.a13, "answer_4": req.body.a14 },
         { "question": req.body.q2, "answer": req.body.a2 },
     ]
 
